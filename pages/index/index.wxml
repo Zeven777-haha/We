@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="header">
+    <text class="title">新建联系人</text>
+  </view>
+
+  <!-- 显示头像和上传按钮 -->
+  <view class="avatar-section">
+    <image class="avatar" src="{{avatarUrl || '/images/default-avatar.png'}}" mode="aspectFill"></image>
+    <button bindtap="chooseAvatar">添加照片</button>
+  </view>
+
+  <!-- 输入框：姓、名、公司、电话、电子邮件 -->
+  <view class="input-section">
+    <view class="input-group">
+      <text class="label">姓氏</text>
+      <input class="input" placeholder="姓氏" bindinput="onLastNameInput" value="{{lastName}}" />
+    </view>
+    <view class="input-group">
+      <text class="label">名字</text>
+      <input class="input" placeholder="名字" bindinput="onFirstNameInput" value="{{firstName}}" />
+    </view>
+    <view class="input-group">
+      <text class="label">公司</text>
+      <input class="input" placeholder="公司" bindinput="onCompanyInput" value="{{company}}" />
+    </view>
+    <view class="input-group">
+      <text class="label">电话</text>
+      <input class="input" placeholder="电话" bindinput="onPhoneInput" value="{{phone}}" />
+    </view>
+    <view class="input-group">
+      <text class="label">电子邮件</text>
+      <input class="input" placeholder="电子邮件" bindinput="onEmailInput" value="{{email}}" />
+    </view>
+  </view>
+
+  <!-- 保存按钮 -->
+  <button class="save-btn" bindtap="saveContact">保存联系人</button>
+</view>

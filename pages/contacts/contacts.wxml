@@ -1,0 +1,20 @@
+<view class="container">
+  <!-- 顶部标题 -->
+  <view class="header">
+    <text class="title">牢6的通讯录</text>
+  </view>
+
+  <!-- 联系人列表 -->
+  <block wx:for="{{contacts}}" wx:key="id">
+    <view class="contact-item">
+      <!-- 左侧显示姓名 -->
+      <text class="contact-name">{{item.fullName}}</text>
+      <!-- 右侧显示查看详情按钮 -->
+      <button class="detail-button" bindtap="goToContactDetail" data-id="{{item._id}}">查看详情</button>
+    </view>
+    <!-- 分隔线 -->
+    <view class="divider"></view>
+  </block>
+</view>
+
+

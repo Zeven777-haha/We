@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="header">
+    <text class="title">联系人详情</text>
+  </view>
+
+  <view class="avatar-section">
+    <image class="avatar" src="{{contact.avatarUrl || '/images/default-avatar.png'}}" mode="aspectFill"></image>
+    <button bindtap="changeAvatar">{{contact.avatarUrl ? '更改照片' : '添加照片'}}</button>
+  </view>
+
+  <view class="input-section">
+    <view class="input-group">
+      <text class="label">姓氏</text>
+      <input class="input" placeholder="姓氏" bindinput="onLastNameInput" value="{{contact.lastName}}" />
+    </view>
+    <view class="input-group">
+      <text class="label">名字</text>
+      <input class="input" placeholder="名字" bindinput="onFirstNameInput" value="{{contact.firstName}}" />
+    </view>
+    <view class="input-group">
+      <text class="label">公司</text>
+      <input class="input" placeholder="公司" bindinput="onCompanyInput" value="{{contact.company}}" />
+    </view>
+    <view class="input-group">
+      <text class="label">电话</text>
+      <input class="input" placeholder="电话" bindinput="onPhoneInput" value="{{contact.phone}}" />
+    </view>
+    <view class="input-group">
+      <text class="label">电子邮件</text>
+      <input class="input" placeholder="电子邮件" bindinput="onEmailInput" value="{{contact.email}}" />
+    </view>
+  </view>
+
+  <button class="save-btn" bindtap="saveChanges">保存更改</button>
+  <button class="delete-btn" bindtap="deleteContact">一键删除</button>
+</view>
+
